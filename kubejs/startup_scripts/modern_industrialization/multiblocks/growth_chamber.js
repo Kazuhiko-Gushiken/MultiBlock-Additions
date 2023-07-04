@@ -46,7 +46,7 @@ MIMachineEvents.registerMachines(e => {
         fluidOutputs => {},
         
         /* Model Configuration */
-        "ad_astra:steel_plating", // casing of the controller
+        "steel_plate_casing", // casing of the controller
         "growth_chamber", // overlay folder
         true, // front overlay
         false, // top overlay
