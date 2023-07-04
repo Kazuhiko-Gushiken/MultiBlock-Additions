@@ -15,7 +15,7 @@ MIMachineEvents.registerMachines(e => {
     const lamp = e.memberOfBlock('blockus:orange_redstone_lamp_lit');
     const growthChamberHatch = e.hatchOf('item_input', 'item_output', 'energy_input');
 
-    const growthChamberShape = e.layeredShape('ad_astra:steel_plating', [
+    const growthChamberShape = e.layeredShape('steel_plate_casing', [
         //y=0      1      2
         [ ' BBB ', ' GGG ', ' GGG ', ' GGG ', ' GGG ', '     '],
         [ 'BRRRB', 'G   G', 'G   G', 'G   G', 'G   G', ' GGG '],
