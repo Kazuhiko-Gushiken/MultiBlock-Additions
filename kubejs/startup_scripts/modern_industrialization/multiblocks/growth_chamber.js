@@ -42,8 +42,8 @@ MIMachineEvents.registerMachines(e => {
         e.progressBar(77, 33, "triple_arrow"),
         // REI Item inputs, item outputs, fluid inputs, fluid outputs
         itemInputs => itemInputs.addSlot(56, 35), 
-        itemOutputs => itemOutputs.addSlots(102, 35, 4, 4),
-        fluidInputs => fluidInputs.addSlot(56, 20),
+        itemOutputs => itemOutputs.addSlots(102, 35, 6, 10),
+        fluidInputs => fluidInputs.addSlot(56, 55),
         fluidOutputs => {},
         
         /* Model Configuration */
