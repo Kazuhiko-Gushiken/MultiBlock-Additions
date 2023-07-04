@@ -3,7 +3,8 @@ let GROWTH_CHAMBER;
 MIMachineEvents.registerRecipeTypes(e => {
     GROWTH_CHAMBER = e.register('growth_chamber')
         .withItemInputs()
-        .withItemOutputs();
+        .withItemOutputs()
+        .withFluidInputs();
 });
 
 MIMachineEvents.registerMachines(e => {
@@ -13,7 +14,7 @@ MIMachineEvents.registerMachines(e => {
     const grass = e.memberOfBlock('botania:vivid_grass');
     const sapling = e.memberOfBlock('twilightforest:transformation_sapling');
     const lamp = e.memberOfBlock('blockus:orange_redstone_lamp_lit');
-    const growthChamberHatch = e.hatchOf('item_input', 'item_output', 'energy_input');
+    const growthChamberHatch = e.hatchOf('item_input', 'item_output', 'energy_input', 'fluid_input');
 
     const growthChamberShape = e.layeredShape('steel_plate_casing', [
         //y=0      1      2
@@ -38,11 +39,11 @@ MIMachineEvents.registerMachines(e => {
         growthChamberShape, // multiblock shape
 
         // REI Display configuration
-        e.progressBar(77, 33, "triple_arrow"), e.efficiencyBar(48, 86), e.energyBar(14, 44),
+        e.progressBar(77, 33, "triple_arrow"),
         // REI Item inputs, item outputs, fluid inputs, fluid outputs
-        itemInputs => itemInputs.addSlots(56, 35, 1, 1), 
-        itemOutputs => itemOutputs.addSlot(102, 35),
-        fluidInputs => {}, 
+        itemInputs => itemInputs.addSlot(56, 35), 
+        itemOutputs => itemOutputs.addSlots(102, 35, 4, 4),
+        fluidInputs => fluidInputs.addSlot(56, 20),
         fluidOutputs => {},
         
         /* Model Configuration */
